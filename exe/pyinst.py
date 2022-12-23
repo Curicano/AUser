@@ -9,5 +9,6 @@ PyInstaller.__main__.run([
     "-F",
     "-n=AUser",
     "--uac-admin",
-    "--add-data=D:\Storage X\About\IT\Python\Git\AUser\image;image"
+    "--add-data=D:\Storage X\About\IT\Python\Git\AUser\image;image",
+    "--version-file=D:\Storage X\About\IT\Python\Git\AUser\exe\\file_version.py"
 ])
