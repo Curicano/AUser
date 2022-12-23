@@ -72,7 +72,7 @@ class MyWindow(QtWidgets.QMainWindow):
             else:
                 self.ui.sB.showMessage("Пользователь уже включен!", 3000)
         except:
-            print("Ошибка!")
+            self.ui.sB.showMessage("Не выбран пользователь!")
         self.user_reload()
 
     def user_off(self):
@@ -86,7 +86,7 @@ class MyWindow(QtWidgets.QMainWindow):
             else:
                 self.ui.sB.showMessage("Пользователь уже выключен!", 3000)
         except:
-            print("Ошибка!")
+            self.ui.sB.showMessage("Не выбран пользователь!")
         self.user_reload()
 
     def user_reload(self):

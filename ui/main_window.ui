@@ -24,13 +24,19 @@
 	background-color: rgba(22, 8, 23, 200);
 }
 QStatusBar {
-	background-color: rgb(22, 8, 23);
-	border: 1px solid rgb(255, 200, 200);
-	color: rgb(255, 200, 200);
+	background-color: rgb(255, 200, 200);
+	color: rgb(22, 8, 23);
 }
 QListWidget {
 	background-color: transparent;
 	color: rgb(255, 255, 255);
+	border: 1px solid rgb(255, 200, 200);
+}
+QListWidget::item:hover {
+	background-color: rgba(255, 200, 200, 50);
+}
+QListWidget::item:selected {
+	background-color: transparent;
 	border: 1px solid rgb(255, 200, 200);
 }
 QPushButton {
@@ -79,7 +85,11 @@ QPushButton:pressed {
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="sB"/>
+  <widget class="QStatusBar" name="sB">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
