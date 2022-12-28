@@ -15,6 +15,7 @@ class MyWindow(QtWidgets.QMainWindow):
         self.res = self.get_resource_path("image")
         self.setupUi()
         self.connections()
+        self.add_users_in_list()
 
     def get_resource_path(self, relative_path):
         try:
@@ -28,7 +29,6 @@ class MyWindow(QtWidgets.QMainWindow):
         icon.addPixmap(
             QtGui.QPixmap(f"{self.res}\\logo.ico"))
         self.setWindowIcon(icon)
-        self.add_users_in_list()
 
     def get_users_name(self) -> dict:
         users = subprocess.check_output(
